@@ -1,0 +1,143 @@
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background: linear-gradient(to right, skyblue, lightgreen);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+a:hover{
+    background: rgba(122, 121, 121, 0.308);
+}
+
+h1, h3{
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: rgba(3, 8, 8, 0.356);
+}
+
+.wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar Styling*/
+.slider{
+    background: rgba(3, 8, 8, 0.356);
+    display: flex;
+    justify-content: center;
+    display:none;
+}
+
+.flex-nav ul{
+    background: rgba(3, 8, 8, 0.356);
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.flex-nav li{
+    display: flex;
+    flex: 2;
+}
+.flex-nav .social-icon{
+    flex: 1;
+}
+/* Main Body */
+
+.title{
+    margin-bottom: 25px;
+}
+.image-holder{
+    padding: 20px;
+    background: rgba(3, 8, 8, 0.356);
+    margin: 25px 0px 25px 0px;
+}
+.space-filler img{
+    background-image: url(https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-size:cover;
+    width: 100%;
+    height: 400px;
+}
+.description{
+    margin-bottom: 25px;
+}
+
+.signup-form{
+    padding: 20px;
+    text-align: center;
+    background: rgba(3, 8, 8, 0.356);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+.signup-form input, button{
+    padding: 15px;
+    margin-left:10px;
+    font-size: 20px;
+}
+.signup-form button{
+    border: none;
+    margin-left: 20px;
+}
+.signup-form button:hover{
+    background:rgba(94, 175, 250, 0.548);
+    color: white;
+}
+
+/* Media Queries */
+@media all and (max-width: 1000px){
+    .flex-nav ul{
+        flex-wrap: wrap;
+    }
+    .flex-nav li{ 
+        flex: 1 1 50%;
+    }
+    .flex-nav li .social-icon{
+        flex: 1 1 25%;
+    }
+    .signup-form{
+        flex-wrap: wrap;
+    }
+    .signup-form input, button{
+        flex: 1 1 50%;
+        margin-left: 0 !important;
+    }
+}
+
+@media all and (max-width: 500px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider{
+        display: flex;
+    }
+    .flex-nav ul{
+        display: none;
+    }
+    .flex-nav li{
+        flex: 2 2 100%;
+    }
+
+
+}
